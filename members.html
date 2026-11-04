@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>สมาชิก · หารด้วย</title>
+  <meta name="theme-color" content="#0f8a6c">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="wrap page">
+    <h1 class="page-title">👥 สมาชิกในทริป</h1>
+    <div class="card">
+      <h2 id="memFormTitle">เพิ่มสมาชิก</h2>
+      <form id="memberForm" class="row">
+        <input id="mName" placeholder="ชื่อ" required maxlength="30" autocomplete="off">
+        <input id="mPP" placeholder="พร้อมเพย์: เบอร์มือถือ / เลขบัตร (ไม่บังคับ)" inputmode="numeric" autocomplete="off">
+        <button type="button" id="memCancel" class="btn ghost" hidden>ยกเลิก</button>
+        <button class="btn primary" id="memSubmit">เพิ่ม</button>
+      </form>
+      <p class="hint">ใส่พร้อมเพย์ไว้ ระบบจะสร้าง QR ให้เพื่อนสแกนโอนคืนพร้อมยอดเงินอัตโนมัติ</p>
+    </div>
+    <div id="memberList" class="list"></div>
+    <div id="stepNav"></div>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/members.js"></script>
+</body>
+</html>

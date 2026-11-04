@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>รายงาน · หารด้วย</title>
+  <meta name="theme-color" content="#0f8a6c">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/vendor/qrcode.min.js"></script>
+</head>
+<body>
+  <main class="wrap page">
+    <h1 class="page-title no-print">📄 Final report &amp; ส่งลิงก์</h1>
+    <div class="card share no-print" id="shareCard">
+      <h2>ส่งลิงก์รายงานให้เพื่อน</h2>
+      <div class="row">
+        <input id="shareLink" readonly aria-label="ลิงก์รายงาน" value="กำลังสร้างลิงก์…">
+        <button class="btn primary" id="copyBtn">คัดลอกลิงก์</button>
+      </div>
+      <div class="row">
+        <button id="nativeShare" class="btn" hidden>แชร์…</button>
+        <a id="lineShare" class="btn line" target="_blank" rel="noopener">ส่งทาง LINE</a>
+        <a id="openView" class="btn ghost" target="_blank" rel="noopener">ดูหน้าที่เพื่อนจะเห็น ↗</a>
+        <button id="printBtn" class="btn ghost">พิมพ์ / บันทึก PDF</button>
+      </div>
+      <p class="hint" id="shareHint"></p>
+    </div>
+    <div id="reportBox"></div>
+    <div id="stepNav"></div>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/report.js"></script>
+</body>
+</html>
