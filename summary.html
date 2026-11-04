@@ -3,21 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>คำนวณ · หารด้วย</title>
-  <meta name="theme-color" content="#0f8a6c">
+  <title>เคลียร์เงิน · หารด้วย</title>
+  <meta name="description" content="หารด้วย — ผู้ช่วยหารค่าเที่ยวกับเพื่อน คำนวณว่าใครต้องโอนให้ใคร พร้อม QR พร้อมเพย์">
+  <meta name="theme-color" content="#20a977">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/vendor/qrcode.min.js"></script>
 </head>
 <body>
-  <main class="wrap page">
-    <h1 class="page-title">🧮 คำนวณค่าใช้จ่ายแต่ละคน</h1>
-    <div id="summaryBox"></div>
-    <div id="stepNav"></div>
-  </main>
+  <div class="content">
+    <section class="page-heading">
+      <div><span class="eyebrow">โอนน้อยครั้ง จบไว</span><h1>เคลียร์เงิน</h1><p>ระบบคำนวณยอดของแต่ละคน และจัดลำดับการโอนให้เหลือน้อยครั้งที่สุด</p></div>
+      <span class="optimized" id="optBadge"></span>
+    </section>
+    <div id="settleBox"></div>
+  </div>
   <script src="js/common.js"></script>
   <script src="js/summary.js"></script>
 </body>

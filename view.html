@@ -4,30 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>สรุปค่าใช้จ่ายทริป · หารด้วย</title>
-  <meta name="theme-color" content="#0f8a6c">
+  <meta name="description" content="หารด้วย — ผู้ช่วยหารค่าเที่ยวกับเพื่อน คำนวณว่าใครต้องโอนให้ใคร พร้อม QR พร้อมเพย์">
+  <meta name="theme-color" content="#20a977">
   <meta name="robots" content="noindex">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/vendor/qrcode.min.js"></script>
 </head>
 <body>
-  <main class="wrap page">
+  <div class="content">
     <div class="banner no-print" id="viewBanner" hidden>
-      <span>📩 รายงานที่เพื่อนแชร์มา — สแกน QR เพื่อโอนได้เลย</span>
-      <span class="row tight">
-        <button class="btn sm" id="importBtn">นำเข้าไปแก้ไขต่อ</button>
-        <a class="btn ghost sm" href="index.html">สร้างทริปของฉัน</a>
-      </span>
+      <span>📩 รายงานที่เพื่อนแชร์มา — ดูยอดของคุณ แล้วสแกน QR โอนได้เลย</span>
+      <button class="outline-btn" id="importBtn">นำเข้าไปแก้ไขต่อ</button>
     </div>
-    <div class="confirm no-print" id="importConfirm" hidden>
+    <div class="confirm no-print" id="importConfirm" hidden style="margin:-10px 0 20px">
       <span>ข้อมูลทริปในเครื่องนี้จะถูกแทนที่ด้วยรายงานนี้ ตกลงไหม?</span>
-      <span class="row tight"><button class="btn sm danger-fill" id="importYes">แทนที่</button><button class="btn sm ghost" id="importNo">ยกเลิก</button></span>
+      <span class="row"><button class="danger-fill" id="importYes">แทนที่</button><button class="cancel-btn" id="importNo" style="min-height:38px">ยกเลิก</button></span>
     </div>
-    <div id="sharedReport"><div class="empty">กำลังโหลดรายงาน…</div></div>
-  </main>
+    <div id="sharedReport"><div class="panel empty">กำลังโหลดรายงาน…</div></div>
+    <section class="panel report-section" id="transferBox" hidden></section>
+  </div>
   <script src="js/common.js"></script>
   <script src="js/view.js"></script>
 </body>

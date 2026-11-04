@@ -5,34 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>หารด้วย — ผู้ช่วยหารค่าเที่ยว</title>
   <meta name="description" content="หารด้วย — ผู้ช่วยหารค่าเที่ยวกับเพื่อน คำนวณว่าใครต้องโอนให้ใคร พร้อม QR พร้อมเพย์">
-  <meta name="theme-color" content="#0f8a6c">
+  <meta name="theme-color" content="#20a977">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="wrap page">
-    <section class="hero">
-      <h1>หารค่าเที่ยวกับเพื่อน<br>จบในไม่กี่ขั้นตอน</h1>
-      <p>เพิ่มเพื่อน บันทึกค่าใช้จ่าย ระบบคำนวณว่าใครต้องโอนให้ใครเท่าไหร่ แล้วส่งลิงก์รายงานพร้อม QR พร้อมเพย์ให้ทุกคนสแกนจ่ายได้ทันที</p>
-    </section>
-    <div id="homeStats"></div>
-    <div class="steps" id="steps"></div>
-    <div class="card">
-      <h2>จัดการข้อมูลทริป</h2>
+  <div class="content">
+    <div id="dash"></div>
+    <section class="panel" id="manage" style="margin-top:16px">
+      <div class="panel-head"><div><h2>จัดการข้อมูลทริป</h2><p>ข้อมูลเก็บในเบราว์เซอร์ของเครื่องนี้ เพื่อนจะเห็นผ่านลิงก์รายงานที่คุณส่งให้</p></div></div>
       <div class="row">
-        <button class="btn" id="demoBtn">ลองใช้ข้อมูลตัวอย่าง</button>
-        <button class="btn ghost danger" id="resetBtn">ล้างข้อมูล เริ่มทริปใหม่</button>
+        <button class="outline-btn" id="demoBtn">ลองใช้ข้อมูลตัวอย่าง</button>
+        <button class="outline-btn danger" id="resetBtn">ล้างข้อมูล เริ่มทริปใหม่</button>
       </div>
       <div class="confirm" id="resetConfirm" hidden>
-        <span id="resetMsg">ลบสมาชิกและค่าใช้จ่ายทั้งหมดจริงไหม?</span>
-        <span class="row tight"><button class="btn sm danger-fill" id="resetYes">ยืนยัน</button><button class="btn sm ghost" id="resetNo">ยกเลิก</button></span>
+        <span id="resetMsg"></span>
+        <span class="row"><button class="danger-fill" id="resetYes">ยืนยัน</button><button class="cancel-btn" id="resetNo" style="min-height:38px">ยกเลิก</button></span>
       </div>
-      <p class="hint">ข้อมูลเก็บในเบราว์เซอร์ของเครื่องนี้ — เพื่อนจะเห็นข้อมูลผ่านลิงก์รายงานที่คุณส่งให้</p>
-    </div>
-  </main>
+    </section>
+  </div>
   <script src="js/common.js"></script>
   <script src="js/home.js"></script>
 </body>
